@@ -34,6 +34,8 @@ escolha_vendedor = st.selectbox('Vendedor',lista_vendedor)
 
 df3  = df1[df1.vendedor == escolha_vendedor]
 
+st.table(df3.Segmento.value_counts().to_frame(name='Qtde'))
+
 lista_segmentos = df3.Segmento.unique()
 
 escolha_segmento = st.selectbox('Escolha um Segmento de Clientes',lista_segmentos)
